@@ -328,7 +328,8 @@ header {
 }
 
 .dda-container p {
-  width: 420px;
+  width: 100%;
+  max-width: 420px;
 }
 
 #dda-discord:before {
