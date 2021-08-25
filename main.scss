@@ -1,0 +1,428 @@
+$bg-color: #fff;
+$blue: #779dca;
+$width: 1200px;
+
+* {
+	margin: 0;
+	padding: 0;
+	font-family: "Roboto", sans-serif;
+	font-size: 20px;
+}
+
+@media (min-width: 768px) {
+	.navbar-brand {
+		position: absolute;
+		left: 50%;
+		transform: translateX(-50%);
+	}
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: bold !important;
+}
+
+.navbar {
+	border: 1px solid #779dca !important;
+	background-color: $blue !important;
+	a {
+		color: #fff;
+	}
+}
+
+.navbar-brand {
+	font-weight: bold;
+	padding-right: 62px;
+	display: none;
+}
+
+.navbar-header {
+	display: block;
+	text-align: center;
+}
+
+.nav-link:hover {
+	color: #fff;
+	padding-bottom: 1px;
+	border-bottom: 1px solid #fff;
+}
+
+.navbar-toggler {
+	border-color: #fff !important;
+}
+
+footer {
+	margin-top: 24px;
+	padding: 0 20px;
+	background-color: $blue;
+
+	p {
+		padding: 24px 0;
+		width: 100%;
+		max-width: 600px;
+		margin: 0 auto;
+		color: #fff;
+		text-align: center;
+		font-size: 16px;
+	}
+}
+
+h1 {
+	font-size: 56px;
+}
+
+h2 {
+	font-size: 40px;
+}
+
+#dda-title {
+	font-weight: bold;
+	text-align: center;
+	padding-top: 24px;
+	background-color: $blue;
+	border: 1px solid #779dca !important;
+	h1 {
+		display: inline;
+		font-size: 24px;
+		color: #fff;
+	}
+	a {
+		text-decoration: none;
+	}
+	a:hover {
+		text-decoration: none;
+	}
+}
+
+body {
+	background-color: $bg-color;
+}
+
+header {
+	background-color: $blue;
+	display: flex;
+	justify-content: center;
+}
+
+#header-container {
+	position: relative;
+	width: 100%;
+	max-width: $width;
+	padding: 56px 0 120px 0;
+	margin: 0 32px;
+	font-size: 24px;
+	color: #fff;
+
+	h2 {
+		margin-bottom: 24px;
+		opacity: 70%;
+	}
+}
+
+#header-container::after {
+	content: "";
+	z-index: 2;
+	width: 450px;
+	height: 450px;
+	position: absolute;
+	top: 56px;
+	right: 0;
+	background-image: url("images/dda-banner.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+
+.dda-about-container {
+	h2 {
+		margin-bottom: 16px;
+	}
+}
+
+#dda-summary {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: center;
+	margin: 160px auto 0 auto;
+	padding: 32px;
+	img {
+		max-width: 500px;
+		margin-left: 16px;
+	}
+	h2 {
+		margin-bottom: 16px;
+	}
+}
+
+#dda-summary__text {
+	max-width: 450px;
+}
+
+#dda-card-container {
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: stretch;
+}
+
+.dda-card {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	position: relative;
+	margin: 16px;
+	height: 400px;
+	width: 300px;
+	background-image: url("images/dda-background.png");
+	overflow: hidden;
+
+	img {
+		max-height: 350px;
+		transition: all 0.2s ease-in;
+		transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	}
+}
+
+.dda-card::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 20%;
+	padding-top: 20%;
+	background-color: $bg-color;
+	transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.dda-card:hover {
+	img {
+		transform: scale(1.15);
+		transition: all 0.2s ease-in;
+		transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	}
+	.dda-label {
+		height: 55px;
+		transition: all 0.2s ease-in;
+		transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	}
+}
+
+.dda-label {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 50px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0.75) 100%);
+	color: #fff;
+	font-style: normal;
+	font-family: "Roboto", sans-serif;
+	font-size: 20px;
+	font-weight: bold;
+	transition: all 0.2s ease-in;
+	transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.dda-about-container {
+	padding: 80px 0;
+	background-color: $blue;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+}
+
+#dda-about {
+	margin: 0 32px;
+	flex-direction: row;
+	justify-content: space-around;
+
+	img {
+		max-width: 500px;
+		margin-left: 16px;
+	}
+}
+
+.dda-container {
+	position: relative;
+	width: 100%;
+	max-width: 1200px;
+	margin: 80px auto;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	h1 {
+		color: $blue;
+		margin-bottom: 40px;
+	}
+	p {
+		width: 420px;
+	}
+}
+
+#dda-discord:before {
+	content: "";
+	z-index: 2;
+	width: 300px;
+	height: 300px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image: url("images/dda_hagurumon.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+
+#dda-discord:after {
+	content: "";
+	z-index: 2;
+	width: 300px;
+	height: 300px;
+	position: absolute;
+	top: 80px;
+	right: 0;
+	background-image: url("images/dda-tentomon.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: center;
+}
+
+.dda-button-container,
+.dda-button-container__white {
+	position: relative;
+	background-color: $blue;
+	display: inline-block;
+	padding: 12px 32px;
+	margin: 24px 0;
+	font-weight: bold;
+	font-size: 24px;
+	text-decoration: none;
+	color: #fff;
+	transition: 0.2s;
+}
+
+.dda-button-container:hover {
+	color: #fff;
+	transform: scale(1.12);
+	transition: 0.2s;
+}
+
+.dda-button-container__white {
+	background-color: #fff;
+	color: #000;
+}
+
+.dda-button-container__white:hover {
+	color: #000;
+	transform: scale(1.12);
+	transition: 0.2s;
+}
+
+.dda-button-container::after,
+.dda-button-container__white::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 1.5rem;
+	padding-top: 1.5rem;
+	background-color: $bg-color;
+	transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.dda-button-container__white::after {
+	background-color: $blue;
+}
+
+@media only screen and (max-width: 1050px) {
+	#dda-summary__text {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+
+		h2:nth-of-type(1) {
+			text-align: center;
+		}
+	}
+
+	#dda-discord:after {
+		display: none;
+	}
+
+	#dda-discord:before {
+		display: none;
+	}
+}
+
+@media only screen and (max-width: 1030px) {
+	#dda-about {
+		img {
+			margin: 0 32px;
+			width: 100%;
+			max-width: 500px;
+		}
+	}
+
+	#dda-summary {
+		img {
+			margin: 0 32px;
+			width: 100%;
+			max-width: 500px;
+		}
+	}
+}
+
+@media only screen and (max-width: 1000px) {
+	#header-container {
+		text-align: center;
+	}
+
+	#header-container::after {
+		display: none;
+	}
+
+	.dda-container {
+		padding: 0 32px;
+		width: 100%;
+		max-width: 420px;
+	}
+
+	#dda-discord {
+		p {
+			width: 100%;
+		}
+	}
+
+	#dda-summary {
+		margin-top: 80px;
+	}
+}
+
+@media only screen and (max-width: 576px) {
+	.navbar-brand {
+		display: inline;
+	}
+	#dda-title {
+		display: none;
+	}
+	#header-container {
+		h1 {
+			font-size: 34px;
+		}
+		h2 {
+			font-size: 26px;
+		}
+	}
+}

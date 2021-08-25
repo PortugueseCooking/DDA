@@ -1,0 +1,489 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+}
+
+@media (min-width: 768px) {
+  .navbar-brand {
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold !important;
+}
+
+.navbar {
+  border: 1px solid #779dca !important;
+  background-color: #779dca !important;
+}
+
+.navbar a {
+  color: #fff;
+}
+
+.navbar-brand {
+  font-weight: bold;
+  padding-right: 62px;
+  display: none;
+}
+
+.navbar-header {
+  display: block;
+  text-align: center;
+}
+
+.nav-link:hover {
+  color: #fff;
+  padding-bottom: 1px;
+  border-bottom: 1px solid #fff;
+}
+
+.navbar-toggler {
+  border-color: #fff !important;
+}
+
+footer {
+  margin-top: 24px;
+  padding: 0 20px;
+  background-color: #779dca;
+}
+
+footer p {
+  padding: 24px 0;
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+}
+
+h1 {
+  font-size: 56px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+#dda-title {
+  font-weight: bold;
+  text-align: center;
+  padding-top: 24px;
+  background-color: #779dca;
+  border: 1px solid #779dca !important;
+}
+
+#dda-title h1 {
+  display: inline;
+  font-size: 24px;
+  color: #fff;
+}
+
+#dda-title a {
+  text-decoration: none;
+}
+
+#dda-title a:hover {
+  text-decoration: none;
+}
+
+body {
+  background-color: #fff;
+}
+
+header {
+  background-color: #779dca;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#header-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  padding: 56px 0 120px 0;
+  margin: 0 32px;
+  font-size: 24px;
+  color: #fff;
+}
+
+#header-container h2 {
+  margin-bottom: 24px;
+  opacity: 70%;
+}
+
+#header-container::after {
+  content: "";
+  z-index: 2;
+  width: 450px;
+  height: 450px;
+  position: absolute;
+  top: 56px;
+  right: 0;
+  background-image: url("images/dda-banner.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.dda-about-container h2 {
+  margin-bottom: 16px;
+}
+
+#dda-summary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 160px auto 0 auto;
+  padding: 32px;
+}
+
+#dda-summary img {
+  max-width: 500px;
+  margin-left: 16px;
+}
+
+#dda-summary h2 {
+  margin-bottom: 16px;
+}
+
+#dda-summary__text {
+  max-width: 450px;
+}
+
+#dda-card-container {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+.dda-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  margin: 16px;
+  height: 400px;
+  width: 300px;
+  background-image: url("images/dda-background.png");
+  overflow: hidden;
+}
+
+.dda-card img {
+  max-height: 350px;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  -webkit-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.dda-card::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20%;
+  padding-top: 20%;
+  background-color: #fff;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.dda-card:hover img {
+  -webkit-transform: scale(1.15);
+          transform: scale(1.15);
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  -webkit-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.dda-card:hover .dda-label {
+  height: 55px;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  -webkit-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.dda-label {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: -webkit-gradient(linear, left bottom, left top, from(#000000), to(rgba(0, 0, 0, 0.75)));
+  background: linear-gradient(0deg, #000000 0%, rgba(0, 0, 0, 0.75) 100%);
+  color: #fff;
+  font-style: normal;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  -webkit-transition: all 0.2s ease-in;
+  transition: all 0.2s ease-in;
+  -webkit-transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+          transition-timing-function: cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.dda-about-container {
+  padding: 80px 0;
+  background-color: #779dca;
+  color: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#dda-about {
+  margin: 0 32px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+#dda-about img {
+  max-width: 500px;
+  margin-left: 16px;
+}
+
+.dda-container {
+  position: relative;
+  width: 100%;
+  max-width: 1200px;
+  margin: 80px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.dda-container h1 {
+  color: #779dca;
+  margin-bottom: 40px;
+}
+
+.dda-container p {
+  width: 420px;
+}
+
+#dda-discord:before {
+  content: "";
+  z-index: 2;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-image: url("images/dda_hagurumon.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+#dda-discord:after {
+  content: "";
+  z-index: 2;
+  width: 300px;
+  height: 300px;
+  position: absolute;
+  top: 80px;
+  right: 0;
+  background-image: url("images/dda-tentomon.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.dda-button-container,
+.dda-button-container__white {
+  position: relative;
+  background-color: #779dca;
+  display: inline-block;
+  padding: 12px 32px;
+  margin: 24px 0;
+  font-weight: bold;
+  font-size: 24px;
+  text-decoration: none;
+  color: #fff;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.dda-button-container:hover {
+  color: #fff;
+  -webkit-transform: scale(1.12);
+          transform: scale(1.12);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.dda-button-container__white {
+  background-color: #fff;
+  color: #000;
+}
+
+.dda-button-container__white:hover {
+  color: #000;
+  -webkit-transform: scale(1.12);
+          transform: scale(1.12);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.dda-button-container::after,
+.dda-button-container__white::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1.5rem;
+  padding-top: 1.5rem;
+  background-color: #fff;
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+          transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.dda-button-container__white::after {
+  background-color: #779dca;
+}
+
+@media only screen and (max-width: 1050px) {
+  #dda-summary__text {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #dda-summary__text h2:nth-of-type(1) {
+    text-align: center;
+  }
+  #dda-discord:after {
+    display: none;
+  }
+  #dda-discord:before {
+    display: none;
+  }
+}
+
+@media only screen and (max-width: 1030px) {
+  #dda-about img {
+    margin: 0 32px;
+    width: 100%;
+    max-width: 500px;
+  }
+  #dda-summary img {
+    margin: 0 32px;
+    width: 100%;
+    max-width: 500px;
+  }
+}
+
+@media only screen and (max-width: 1000px) {
+  #header-container {
+    text-align: center;
+  }
+  #header-container::after {
+    display: none;
+  }
+  .dda-container {
+    padding: 0 32px;
+    width: 100%;
+    max-width: 420px;
+  }
+  #dda-discord p {
+    width: 100%;
+  }
+  #dda-summary {
+    margin-top: 80px;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .navbar-brand {
+    display: inline;
+  }
+  #dda-title {
+    display: none;
+  }
+  #header-container h1 {
+    font-size: 34px;
+  }
+  #header-container h2 {
+    font-size: 26px;
+  }
+}
+/*# sourceMappingURL=main.css.map */
